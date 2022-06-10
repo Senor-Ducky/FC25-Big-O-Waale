@@ -7,7 +7,7 @@ class GSPatterns {
 	#synthsCrud = null;
 	#patternsCrud = null;
 	#channelsCrud = null;
-
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	constructor() {
 		const uiPatterns = GSUI.$createElement( "gsui-patterns" );
 		const svgForms = Object.freeze( {
@@ -17,9 +17,9 @@ class GSPatterns {
 			bufferHD: new gsuiWaveforms(),
 			slices: new gsuiSlicesforms(),
 		} );
-
-		uiPatterns.onpatternDataTransfer = elPat => elPat.dataset.id;
-		uiPatterns.onchange = ( act, ...args ) => {
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		uiPattern.onpatternDataTransfer = elPat => elPat.dataset.id;
+		uiPattern.onchange = ( act, ...args ) => {
 			if ( DAWCore.actions.has( act ) ) {
 				const daw = this.#dawcore;
 
@@ -61,8 +61,7 @@ class GSPatterns {
 		svgForms.bufferHD.hdMode( true );
 		svgForms.bufferHD.setDefaultViewbox( 260, 48 );
 	}
-
-	// .........................................................................
+	//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	setDAWCore( core ) {
 		this.#dawcore = core;
 	}
@@ -124,7 +123,7 @@ class GSPatterns {
 		}
 	}
 
-	// .........................................................................
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	#updatePatternContent( id ) {
 		const daw = this.#dawcore;
 		const pat = daw.$getPattern( id );
