@@ -12,6 +12,15 @@ This is an open source desktop port of GridSound DAW application which provides 
 The project consists of GUI for seamless user experience and consist of various plugins which give industrial effects and make your music ready for the market.
 This is made in considersation with the middle class budget who can't afford a very expensive application with minimal cost for extra plugins and high end market features.
 
+## 📚 Features:
+- Fully functional offline/online DAW.
+- Import/export various audio formats including WAV.
+- High Bit-Rate Sampling.
+- Local/Cloud progress save options.
+- Pre-Packaged with Synth, Wave generator, MIDI player and much more.
+- Very low size (127MB).
+- Lower CPU/GPU utilization.
+
 ## 🤔 What is a Digital Audio Workstation?
 
 A digital audio workstation (DAW) is music production software that allows users to record audio on a personal computer. DAW software works on both the Mac and Windows operating systems. It is used for audio recording, audio editing, MIDI editing, mixing, and mastering, among other functions. DAW software powers sessions in professional recording studios and home studios alike.
