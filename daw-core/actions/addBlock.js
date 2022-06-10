@@ -1,5 +1,5 @@
 "use strict";
-
+//adding new block function creation to the daw window
 DAWCore.actions.set( "addBlock", ( daw, pattern, when, track ) => {
 	const nId = DAWCore.actionsCommon.getNextIdOf( daw.$getBlocks() );
 	const objBlc = DAWCore.json.block( {
