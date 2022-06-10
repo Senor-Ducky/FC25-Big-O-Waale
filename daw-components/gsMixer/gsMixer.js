@@ -1,5 +1,4 @@
 "use strict";
-
 class GSMixer {
 	#dawcore = null;
 	onselectChan = null;
@@ -16,7 +15,6 @@ class GSMixer {
 			changeGainChannel: ( id, val ) => this.rootElement.changeGainChannel( id, val ),
 		},
 	} );
-
 	constructor() {
 		Object.seal( this );
 
@@ -24,8 +22,6 @@ class GSMixer {
 		this.rootElement.onchange = this.#onchange.bind( this );
 		this.rootElement.onselectChan = this.#onselectChan.bind( this );
 	}
-
-	// .........................................................................
 	setDAWCore( core ) {
 		this.#dawcore = core;
 	}
@@ -47,8 +43,6 @@ class GSMixer {
 	getSelectedChannelId() {
 		return this.rootElement.getSelectedChannelId();
 	}
-
-	// .........................................................................
 	#oninput( id, prop, val ) {
 		this.#dawcore.liveChangeChannel( id, prop, val );
 	}
