@@ -1,5 +1,4 @@
 "use strict";
-
 class GSEffects {
 	#dawcore = null;
 	#destFilter = "main";
@@ -12,7 +11,6 @@ class GSEffects {
 			changeEffectData: ( id, obj ) => this.#changeEffectData( id, obj ),
 		},
 	} );
-
 	constructor() {
 		Object.seal( this );
 
@@ -36,8 +34,6 @@ class GSEffects {
 			},
 		} );
 	}
-
-	// .........................................................................
 	setDAWCore( core ) {
 		this.#dawcore = core;
 	}
@@ -57,8 +53,6 @@ class GSEffects {
 	clear() {
 		this.#ctrlEffects.clear();
 	}
-
-	// .........................................................................
 	#changeEffectData( id, obj ) {
 		const uiFx = this.rootElement.getFxHTML( id ).uiFx;
 
