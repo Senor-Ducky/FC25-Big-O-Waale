@@ -39,7 +39,7 @@ Work on sound design and non-musical audio. A digital audio workstation works fo
 ### 🔌 Plugins:
 There are countless software plugins for DAW software, each one coming with its own unique functionality, thus expanding the overall variety of sounds and manipulations that are possible. Each have their own form of generating or manipulating sound, tone, pitch, and speed of a simple sound and transform it into something different. To achieve an even more distinctive sound, multiple plugins can be used in layers, and further automated to manipulate the original sounds.
 
-###Stack:
+### Stack:
  
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 &nbsp;
