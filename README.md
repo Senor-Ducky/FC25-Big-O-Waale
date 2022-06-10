@@ -1,4 +1,5 @@
-# FC25-Big-O-Waale
+https://img.shields.io/endpoint?url=<?style=plastic&logo=appveyor>&style<STYLE>
+# FC25-Big-O-Waale 
 
 Repository for Fantom Code(RVIT) Hackathon project
 
