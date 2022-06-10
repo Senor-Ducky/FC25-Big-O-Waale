@@ -1,11 +1,11 @@
 "use strict";
 
 DAWCore.actions.set( "addPatternDrums", daw => {
-	const pats = daw.$getPatterns();
+	const patterns = daw.$getPatterns();
 	const drumsId = DAWCore.actionsCommon.getNextIdOf( daw.$getDrums() );
-	const patId = DAWCore.actionsCommon.getNextIdOf( pats );
+	const patId = DAWCore.actionsCommon.getNextIdOf( patterns );
 	const patName = DAWCore.actionsCommon.createUniqueName( daw.$getPatterns(), "drums" );
-	const order = Object.values( pats ).reduce( ( max, pat ) => {
+	const order = Object.values( patterns ).reduce( ( max, pat ) => {
 		return pat.type !== "drums"
 			? max
 			: Math.max( max, pat.order );
