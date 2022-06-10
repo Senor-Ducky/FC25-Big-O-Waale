@@ -8,8 +8,8 @@ Repository for Fantom Code(RVIT) Hackathon project
 
 ## 🖥️ GridSound(PC)
 
-This is an open source desktop port of GridSound DAW application which provides you with a complete set of toolkits for music production, editing at avery minimal price and some basic features are available free of cost also.
-The project consists of GUI for seamless user experience and consist of various plugins which give industrial effects and make your music ready for the market.
+This is an open source desktop port of GridSound DAW application which provides you with a complete set of toolkits for music production, editing at a very minimal price and some basic features are available free of cost.
+The project consists of responsive GUI for seamless user experience and consist of various plugins which give industrial effects and make your music ready for the market.
 This is made in considersation with the middle class budget who can't afford a very expensive application with minimal cost for extra plugins and high end market features.
 
 ## 📚 Features:
