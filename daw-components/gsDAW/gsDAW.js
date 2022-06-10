@@ -1,5 +1,6 @@
 "use strict";
-class ssDAW {
+
+class GSDAW {
 	#dawcore = new DAWCore();
 	#synth = new GSSynth();
 	#drums = new GSDrums();
@@ -39,6 +40,8 @@ class ssDAW {
 		this.#initEvents();
 		this.#authGetMe();
 	}
+
+	// .........................................................................
 	#initHTML() {
 		document.body.append(
 			this.rootElement,
@@ -338,8 +341,11 @@ class ssDAW {
 		} );
 	}
 
+	// .........................................................................
 	getDAWCore() { return this.#dawcore; }
 	newComposition() { this.#oncmpClickNewLocal(); }
+
+	// .........................................................................
 	#oncontrolsFocus( focStr ) {
 		const beat = this.#dawcore.getCurrentTime();
 		const grid = this.#controlsGetFocusedGrid( focStr );
@@ -571,6 +577,7 @@ class ssDAW {
 		return me;
 	}
 
+	// .........................................................................
 	#setTitle( cmpName ) {
 		const name = cmpName || "GridSound";
 
@@ -580,6 +587,8 @@ class ssDAW {
 		this.#elements.channelName.textContent = this.#dawcore.$getChannel( id ).name;
 		this.#effects.setDestFilter( id );
 	}
+
+	// .........................................................................
 	#oncmpClosed( cmp ) {
 		this.#oncmpChanged( {
 			bpm: cmp.bpm,
