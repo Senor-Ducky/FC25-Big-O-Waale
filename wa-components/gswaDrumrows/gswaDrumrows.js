@@ -19,8 +19,6 @@ class gswaDrumrows {
 	constructor() {
 		Object.seal( this );
 	}
-
-	// .........................................................................
 	setContext( ctx ) {
 		this.stopAllDrums();
 		this.ctx = ctx;
@@ -36,8 +34,6 @@ class gswaDrumrows {
 
 		return d.patterns[ d.drumrows[ rowId ].pattern ].duration;
 	}
-
-	// .........................................................................
 	liveDrumStart( rowId ) {
 		const drum = {
 			row: rowId,
@@ -56,8 +52,6 @@ class gswaDrumrows {
 			}
 		} );
 	}
-
-	// .........................................................................
 	startDrumcut( drumcut, when ) {
 		const cutDur = .001;
 		const whenCutStart = when - cutDur;

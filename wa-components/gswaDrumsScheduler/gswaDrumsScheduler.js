@@ -53,7 +53,3 @@ class gswaDrumsScheduler {
 		this.#drumrows.changeDrumProp( startedId, prop, val );
 	}
 }
-
-/*
-1. The `if` check if the `drum` is new and not updating.
-*/
