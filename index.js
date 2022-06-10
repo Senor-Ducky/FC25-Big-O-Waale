@@ -13,7 +13,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('ui-components/index.html')
+  mainWindow.loadURL("https://gridsound.com/daw/")
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

@@ -360,7 +360,7 @@ class GSDAW {
 		this.#patternroll.rootElement.classList.toggle( "selected", onCmp );
 		grid.focus();
 	}
-	#controletgFocusedGrid( focStr = this.#dawcore.getFocusedName() ) {
+	#controlsGetFocusedGrid( focStr = this.#dawcore.getFocusedName() ) {
 		switch ( focStr ) {
 			default: return null;
 			case "keys": return this.#pianoroll.rootElement;
@@ -371,7 +371,7 @@ class GSDAW {
 	}
 	#onkeydown( e ) {
 		if ( !this.#isKeyboardShortcuts( e ) && !e.ctrlKey && !e.altKey && !e.shiftKey ) {
-			this.#pianorollkeyboardevent( true, e );
+			this.#pianorollKeyboardEvent( true, e );
 		}
 	}
 	#onkeyup( e ) {
