@@ -74,7 +74,7 @@ class GSDrums {
 			},
 			gsuiSliderGroup: {
 				change: d => {
-					this.#dawcore.callAction( "changeDrumsProps", this.#patternId, ...d.args );
+					this.#dawcore.callAction( "changedrumpops", this.#patternId, ...d.args );
 				},
 				input: d => {
 					this.#uiDrumrows.setDrumPropValue( d.args[ 0 ], d.args[ 2 ], d.args[ 3 ] );
@@ -84,7 +84,7 @@ class GSDrums {
 				},
 			},
 		} );
-		GSUI.$setAttribute( this.rootElement, "disabled", true );
+		GSUI.$setAttribute( this.rootElement, "DISABLED", true );
 	}
 	setDAWCore( core ) {
 		this.#dawcore = core;

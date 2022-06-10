@@ -1,4 +1,5 @@
 "use strict";
+
 class GSDAW {
 	#dawcore = new DAWCore();
 	#synth = new GSSynth();
@@ -39,6 +40,8 @@ class GSDAW {
 		this.#initEvents();
 		this.#authGetMe();
 	}
+
+	// .........................................................................
 	#initHTML() {
 		document.body.append(
 			this.rootElement,
@@ -338,8 +341,11 @@ class GSDAW {
 		} );
 	}
 
+	// .........................................................................
 	getDAWCore() { return this.#dawcore; }
 	newComposition() { this.#oncmpClickNewLocal(); }
+
+	// .........................................................................
 	#oncontrolsFocus( focStr ) {
 		const beat = this.#dawcore.getCurrentTime();
 		const grid = this.#controlsGetFocusedGrid( focStr );
@@ -354,7 +360,7 @@ class GSDAW {
 		this.#patternroll.rootElement.classList.toggle( "selected", onCmp );
 		grid.focus();
 	}
-	#controlsGetFocusedGrid( focStr = this.#dawcore.getFocusedName() ) {
+	#controletgFocusedGrid( focStr = this.#dawcore.getFocusedName() ) {
 		switch ( focStr ) {
 			default: return null;
 			case "keys": return this.#pianoroll.rootElement;
@@ -365,7 +371,7 @@ class GSDAW {
 	}
 	#onkeydown( e ) {
 		if ( !this.#isKeyboardShortcuts( e ) && !e.ctrlKey && !e.altKey && !e.shiftKey ) {
-			this.#pianorollKeyboardEvent( true, e );
+			this.#pianorollkeyboardevent( true, e );
 		}
 	}
 	#onkeyup( e ) {
@@ -571,6 +577,7 @@ class GSDAW {
 		return me;
 	}
 
+	// .........................................................................
 	#setTitle( cmpName ) {
 		const name = cmpName || "GridSound";
 
@@ -580,6 +587,8 @@ class GSDAW {
 		this.#elements.channelName.textContent = this.#dawcore.$getChannel( id ).name;
 		this.#effects.setDestFilter( id );
 	}
+
+	// .........................................................................
 	#oncmpClosed( cmp ) {
 		this.#oncmpChanged( {
 			bpm: cmp.bpm,
