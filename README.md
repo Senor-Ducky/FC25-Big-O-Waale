@@ -67,6 +67,6 @@ There are countless software plugins for DAW software, each one coming with its 
 
 - all credits go to the gridsound author, Github repository: https://github.com/gridsound
 
-# LICENSE
+# LICENCE
 
 ![Debian](https://img.shields.io/badge/Licence-MIT-D70A3?style=for-the-badge&logo=&logoColor=white)
