@@ -1,7 +1,7 @@
 {
   "name": "fc25-big-o-waale",
   "version": "1.0.0",
-  "description": "",
+  "description": "Repository for Fantom Code(RVIT) Hackathon project\r ## GridSound(PC)\r This is an open source desktop port of GridSound DAW application which provides you with a complete set of toolkits for music production, editing at avery minimal price and some basic features are available free of cost also.\r The project consists of GUI for seamless user experience and consist of various plugins which give industrial effects and make your music ready for the market.\r This is made in considersation with the middle class budget who can't afford a very expensive application with minimal cost for extra plugins and high end market features.",
   "main": "index.js",
   "dependencies": {
     "boolean": "^3.2.0",
