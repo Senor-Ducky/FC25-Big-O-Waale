@@ -233,3 +233,4 @@ gsui-lfo[ toggle ] .gsuiLFO-typeSVG {
 gsui-lfo[ toggle ] .gsuiLFO-typeRadio:checked + .gsuiLFO-typeSVG {
 	background-color: var( --gsuiLFO-ctrls-color );
 }
+
