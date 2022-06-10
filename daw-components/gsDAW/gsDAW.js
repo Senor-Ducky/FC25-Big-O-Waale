@@ -1,19 +1,19 @@
 "use strict";
 
 class GSDAW {
-	#dawcore = new DAWCore();
-	#synth = new GSSynth();
-	#drums = new GSDrums();
-	#mixer = new GSMixer();
-	#slicer = new GSSlicer();
-	#effects = new GSEffects();
-	#patterns = new GSPatterns();
-	#pianoroll = new GSPianoroll();
-	#patternroll = new GSPatternroll();
-	#windows = GSUI.$createElement( "gsui-windows" );
+	#Dawcore = new DAWCore();
+	#Synth = new GSSynth();
+	#Drums = new GSDrums();
+	#Mixer = new GSMixer();
+	#Slicer = new GSSlicer();
+	#Effects = new GSEffects();
+	#Patterns = new GSPatterns();
+	#Pianoroll = new GSPianoroll();
+	#Patternroll = new GSPatternroll();
+	#Windows = GSUI.$createElement( "gsui-windows" );
 	rootElement = GSUI.$createElement( "gsui-daw", {
 		"oki-cookies": document.cookie.indexOf( "cookieAccepted" ) > -1,
-		version: "0.0.0",
+		version: "1.0.0",
 		volume: this.#dawcore.$getAudioDestinationGain(),
 		uirate: +localStorage.getItem( "uiRefreshRate" ) || "auto",
 		samplerate: this.#dawcore.env.sampleRate,
@@ -298,9 +298,9 @@ class GSDAW {
 		this.#windows.onclose = win => {
 			this.rootElement.toggleWindow( win.dataset.id, false );
 			switch ( win.dataset.id ) {
-				case "piano": this.#dawcore.callAction( "closePattern", "keys" ); break;
-				case "drums": this.#dawcore.callAction( "closePattern", "drums" ); break;
-				case "slicer": this.#dawcore.callAction( "closePattern", "slices" ); break;
+				case "piano": this.#Dawcore.callAction( "closePattern", "keys" ); break;
+				case "drums": this.#Dawcore.callAction( "closePattern", "drums" ); break;
+				case "slicer": this.#Dawcore.callAction( "closePattern", "slices" ); break;
 			}
 		};
 		this.#initWindowsPos( "blocks",   20,  20, 180, 380, 320, 780, "folder-tree", "blocks" );
@@ -347,7 +347,7 @@ class GSDAW {
 
 	// .........................................................................
 	#oncontrolsFocus( focStr ) {
-		const beat = this.#dawcore.getCurrentTime();
+		const beat = this.#Dawcore.getCurrentTime();
 		const grid = this.#controlsGetFocusedGrid( focStr );
 		const onCmp = focStr === "composition";
 
@@ -371,7 +371,7 @@ class GSDAW {
 	}
 	#onkeydown( e ) {
 		if ( !this.#isKeyboardShortcuts( e ) && !e.ctrlKey && !e.altKey && !e.shiftKey ) {
-			this.#pianorollKeyboardEvent( true, e );
+			this.#pianoRollKeyboardEvent( true, e );
 		}
 	}
 	#onkeyup( e ) {

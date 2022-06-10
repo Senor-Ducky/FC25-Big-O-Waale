@@ -22,6 +22,7 @@ class GSDrums {
 				this.#uiDrumrows.add( id, this.rootElement.createDrumrow( id ) );
 				this.#setPropFilter( id, "gain" );
 			},
+			addDrumSolo: id => this.#uiDrum.createUiDrum( id ),
 			removeDrumrow: id => this.#uiDrumrows.remove( id ),
 			changeDrumrow: ( id, prop, val ) => {
 				switch ( prop ) {

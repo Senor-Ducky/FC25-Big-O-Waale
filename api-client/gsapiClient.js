@@ -18,9 +18,16 @@ const gsapiClient = {
 	getUser( username ) {
 		return this._fetch( "GET", `getUser.php?username=${ username }` )
 			.then( ( { data } ) => {
-				data.usernameLow = data.username.toLowerCase();
+				data.UsernameLow = data.userName.toLowerCase();
 				return data;
 			} );
+	},
+	deleteUser(user_id) {
+		return this._fetch("POST", `getUserId.php?username=${ user_id }`)
+		.then((data) => {
+			data.UserIdLow = data.user_id.toLowerCase();
+			return data;
+		});
 	},
 	getUserCompositions( iduser ) {
 		return this._fetch( "GET", `getUserCompositions.php?id=${ iduser }` )
@@ -28,6 +35,13 @@ const gsapiClient = {
 				data.forEach( cmp => cmp.data = JSON.parse( cmp.data ) );
 				return data;
 			} );
+	},
+	getLocalCompositions( idLocal ) {
+		return this._fetch("GET", `getLocalCompositions.php?id=${ idLocal }`)
+		.then( ( { data } ) => {
+			data.forEach( cmp => cmp.data = JSON.parse( cmp.data )  );
+			return data;
+		} );
 	},
 	getComposition( id ) {
 		return this._fetch( "GET", `getComposition.php?id=${ id }` )
