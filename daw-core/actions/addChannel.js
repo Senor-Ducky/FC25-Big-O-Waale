@@ -1,4 +1,5 @@
 "use strict";
+//function for creating new channels to the daw window
 
 DAWCore.actions.set( "addChannel", daw => {
 	const channels = daw.$getChannels();
