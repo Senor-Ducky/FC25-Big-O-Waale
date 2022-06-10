@@ -1,5 +1,4 @@
 "use strict";
-
 class GSSynth {
 	#dawcore = null;
 	#synthId = null;
@@ -16,7 +15,6 @@ class GSSynth {
 			updateOscWave: id => this.rootElement.getOscillator( id ).updateWave(),
 		},
 	} );
-
 	constructor() {
 		Object.seal( this );
 
@@ -60,8 +58,6 @@ class GSSynth {
 			e.stopPropagation();
 		} );
 	}
-
-	// .........................................................................
 	loadWaves() {
 		return new Promise( resolve => {
 			const wavesJS = GSUI.$createElement( "script", { type: "text/javascript", src: "/assets/gswaPeriodicWavesList-v1.js" } );
