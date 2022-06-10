@@ -1,5 +1,5 @@
 "use strict";
-class ssDAW {
+class GSDAW {
 	#dawcore = new DAWCore();
 	#synth = new GSSynth();
 	#drums = new GSDrums();
