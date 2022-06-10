@@ -1,10 +1,8 @@
 "use strict";
-
 class gswaBPMTap {
 	static #stack = [];
 	static #timeBefore = 0;
 	static #stackLimit = 20;
-
 	static reset() {
 		gswaBPMTap.#timeBefore =
 		gswaBPMTap.#stack.length = 0;
@@ -12,7 +10,6 @@ class gswaBPMTap {
 	static tap() {
 		const time = Date.now();
 		const timeBefore = gswaBPMTap.#timeBefore;
-
 		gswaBPMTap.#timeBefore = time;
 		if ( timeBefore ) {
 			const bpm = 60000 / ( time - timeBefore );
