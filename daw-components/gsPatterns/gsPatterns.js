@@ -36,11 +36,13 @@ class GSPatterns {
 				console.log( "GSPatterns.onchange", act, ...args );
 			}
 		};
+		//___________________________________
 		this.data = Object.freeze( {
 			synths: {},
 			patterns: {},
 			channels: {},
 		} );
+		//____________________________________
 		this.rootElement = uiPatterns;
 		this.svgForms = svgForms;
 		this.#uiPatterns = uiPatterns;
@@ -89,6 +91,7 @@ class GSPatterns {
 			this.#uiPatterns.changePattern( bufToPat[ idBuf ], "data-missing", false );
 		} );
 	}
+	//______________________________________
 	change( obj ) {
 		this.#synthsCrud( obj.synths );
 		this.#patternsCrud( obj.patterns );
@@ -96,7 +99,7 @@ class GSPatterns {
 		if ( obj.keys || obj.drums || obj.slices || obj.drumrows || obj.patterns ) {
 			Object.entries( this.#dawcore.$getPatterns() ).forEach( ( [ id, pat ] ) => {
 				const objPat = obj.patterns?.[ id ];
-
+//______________________________________________
 				if (
 					( pat.type === "drums" && ( objPat?.duration || obj.drums?.[ pat.drums ] || obj.drumrows ) ) ||
 					( pat.type === "keys" && ( objPat?.duration || obj.keys?.[ pat.keys ] ) ) ||
@@ -157,8 +160,7 @@ class GSPatterns {
 			}
 		}
 	}
-
-	// .........................................................................
+//____________________________________________________
 	#createSynth( id, obj ) {
 		this.data.synths[ id ] = DAWCore.utils.jsonCopy( obj );
 		this.#uiPatterns.addSynth( id );
@@ -175,6 +177,7 @@ class GSPatterns {
 			this.#uiPatterns.changeSynth( id, "destName", this.#dawcore.$getChannel( obj.dest ).name );
 		}
 	}
+	//____________________________________________________
 	#deleteSynth( id ) {
 		delete this.data.synths[ id ];
 		this.#uiPatterns.deleteSynth( id );
@@ -203,6 +206,7 @@ class GSPatterns {
 			this.#uiPatterns.changePattern( id, "data-missing", true );
 		}
 	}
+	//_______________________________________________
 	#updatePattern( id, obj ) {
 		const dat = this.data.patterns[ id ];
 
@@ -225,8 +229,7 @@ class GSPatterns {
 		}
 		this.#uiPatterns.deletePattern( id );
 	}
-
-	// .........................................................................
+//_____________________________________________________
 	#createChannel( id, obj ) {
 		this.data.channels[ id ] = obj.name;
 	}
@@ -235,9 +238,11 @@ class GSPatterns {
 			this.#uiPatterns.updateChannel( id, obj.name );
 		}
 	}
+	//______________________________________________
 	#deleteChannel( id ) {
 		delete this.data.channels[ id ];
 	}
 }
 
 Object.freeze( GSPatterns );
+//--------------------END-----------------------------
