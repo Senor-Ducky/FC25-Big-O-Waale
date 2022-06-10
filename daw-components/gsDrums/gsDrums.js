@@ -1,5 +1,4 @@
 "use strict";
-
 class GSDrums {
 	#dawcore = null;
 	#drumsId = null;
@@ -42,8 +41,7 @@ class GSDrums {
 			},
 		},
 	} );
-
-	constructor() {
+                constructor() {
 		Object.seal( this );
 
 		GSUI.$listenEvents( this.rootElement, {
@@ -88,8 +86,6 @@ class GSDrums {
 		} );
 		GSUI.$setAttribute( this.rootElement, "disabled", true );
 	}
-
-	// .........................................................................
 	setDAWCore( core ) {
 		this.#dawcore = core;
 	}
@@ -141,8 +137,6 @@ class GSDrums {
 		this.selectPattern( null );
 		this.#dataDrumrows.clear();
 	}
-
-	// .........................................................................
 	#setPropFilter( rowId, prop ) {
 		const propValues = Object.entries( this.#dawcore.$getDrums( this.#drumsId ) )
 			.filter( ( [ , drm ] ) => drm.row === rowId && "gain" in drm )
