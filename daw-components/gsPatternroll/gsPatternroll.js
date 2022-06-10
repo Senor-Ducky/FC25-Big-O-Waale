@@ -1,5 +1,4 @@
 "use strict";
-
 class GSPatternroll {
 	#dawcore = null;
 	#svgForms = null;
@@ -29,7 +28,6 @@ class GSPatternroll {
 			updateBlockViewBox: ( id, blc ) => this.rootElement.updateBlockViewBox( id, blc ),
 		},
 	} );
-
 	constructor() {
 		Object.seal( this );
 
@@ -41,8 +39,6 @@ class GSPatternroll {
 		} );
 		this.rootElement.addEventListener( "gsuiEvents", this.#ongsuiEvents.bind( this ) );
 	}
-
-	// .........................................................................
 	setDAWCore( core ) {
 		this.#dawcore = core;
 	}
@@ -74,8 +70,6 @@ class GSPatternroll {
 		this.#dataBlocks.clear();
 		this.#dataTracks.clear();
 	}
-
-	// .........................................................................
 	#ongsuiEvents( e ) {
 		const d = e.detail;
 
@@ -96,8 +90,6 @@ class GSPatternroll {
 		}
 		e.stopPropagation();
 	}
-
-	// .........................................................................
 	#updatePattern( id ) {
 		this.rootElement.getBlocks().forEach( blc => {
 			if ( blc.dataset.pattern === id ) {
