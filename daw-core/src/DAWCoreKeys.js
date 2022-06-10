@@ -1,11 +1,18 @@
 "use strict";
 
-class DAWCoreKeys {
-	static change( store, patObj, keysObj ) {
+
+
+
+class DAWCoreKeys 
+{
+	static change( store, patObj, keysObj ) 
+	{
 		store.waKeys.change( keysObj );
-		if ( patObj && "duration" in patObj ) {
+		if ( patObj && "duration" in patObj ) 
+		{
 			store.duration = patObj.duration;
-			if ( !store.looping && store.playing ) {
+			if ( !store.looping && store.playing ) 
+			{
 				store.waKeys.scheduler.setLoopBeat( 0, store.duration );
 			}
 		}
@@ -14,8 +21,10 @@ class DAWCoreKeys {
 		const syn = id ? daw.$getAudioSynth( id ) : null;
 		const wasPlaying = store.playing;
 
-		if ( syn !== store.synth ) {
-			if ( wasPlaying ) {
+		if ( syn !== store.synth ) 
+		{
+			if ( wasPlaying ) 
+			{
 				DAWCoreKeys.pause( store );
 			}
 			store.synth = syn;
@@ -92,12 +101,17 @@ class DAWCoreKeys {
 			store.waKeys.stop();
 		}
 	}
-	static stop( daw, store ) {
-		if ( store.playing ) {
+	static stop( daw, store )
+	 {
+		if ( store.playing ) 
+		{
 			DAWCoreKeys.pause( store );
 			DAWCoreKeys.setCurrentTime( daw, store, store.loopA || 0 );
-		} else {
+		} 
+		else 
+		{
 			DAWCoreKeys.setCurrentTime( daw, store, 0 );
 		}
 	}
 }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
