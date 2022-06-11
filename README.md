@@ -1,6 +1,13 @@
 ![Debian](https://img.shields.io/badge/Team-Big--O--Waale-D70A53?style=for-the-badge&logo=tensorflow&logoColor=white)
 # FC25-Big-😮-Waale 
 
+## TEAM MEMBERS:
+- Rahul Mishra
+- Saurav Kumar
+- Ritwik Raj
+- Kartik Tripathi
+
+
 Repository for Fantom Code(RVIT) Hackathon project
 
 <img src="./assets/icon/black/512.png" align="right"
